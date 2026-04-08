@@ -44,8 +44,9 @@ function getHumanChoice() {
     console.log(humanChoice);
 
     // we get back value inside the variable
+    return humanChoice;
 }
 
 
 console.log( getComputerChoice() );
-getHumanChoice();
+console.log( getHumanChoice() );
