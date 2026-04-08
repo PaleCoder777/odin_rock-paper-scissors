@@ -37,10 +37,16 @@ function getComputerChoice() {
 // Declare new function, getHumanChoice()
 function getHumanChoice() {
     // make new variable that will hold the player choice
+    let humanChoice;
+
     // since it is player choice, ask player what they will pick (rock || paper || scissor)
+    humanChoice = prompt(`Pick one of the following: "Rock", "Paper", Scissor"`, "");
+    console.log(humanChoice);
+
     // put player choice in the variable
     // we get back value inside the variable
 }
 
 
 console.log( getComputerChoice() );
+getHumanChoice();
