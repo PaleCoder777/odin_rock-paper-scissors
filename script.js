@@ -1,5 +1,6 @@
 // Foundations / JavaScript Basics / Rock, Paper, Scissors Project
-// Goal: Create a rock, paper, scissors game in the console, in which 5 rounds can be done and the score is shown.
+// Goal: Create a rock, paper, scissors game in the console,
+// in which 5 rounds can be done and the score is shown.
 
 // Step 1: Write the logic to get the computer choice
 // Declare function that gives one of three values (rock, paper, scissors) as the computer choice
@@ -53,8 +54,14 @@ function getHumanChoice() {
 // You will write variables to keep track of the players score.
 
 // Make variable for human score
+let humanScore;
+
 // Make variable for computer score
+let computerScore;
+
 // Scores start at 0
+humanScore = 0;
+computerScore = 0;
 
 
 
