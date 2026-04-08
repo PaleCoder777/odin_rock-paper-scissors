@@ -6,12 +6,15 @@
 // Declare function that gives one of three values (rock, paper, scissors) as the computer choice
 
 function getComputerChoice() {
-    // make a variable that holds a randomn integer value from 0-100, we should probably round it
+    // make a variable that holds a randomn integer value from 0-100
     let randomNumber = Math.random() * 100;
-    let roundedNumber = Math.round(randomNumber);
     console.log(randomNumber);
+    
+    // we should round the random number we get
+    let roundedNumber = Math.round(randomNumber);
     console.log(roundedNumber);
-    // make another variable, that depending on random number, will equal rock || paper | scissors
+
+    // make another variable, that depending on random number, will equal rock || paper || scissors
     // in the end, we get this choice, and this will be the computer choice
 }
 
