@@ -14,7 +14,20 @@ function getComputerChoice() {
     let roundedNumber = Math.round(randomNumber);
     console.log(roundedNumber);
 
-    // make another variable, that depending on random number, will equal rock || paper || scissors
+    // make another variable to hold computer choice
+    let computerChoice;
+
+    // depending on rounded, random number, we put rock || paper || scissor in the computer choice (0-33, 67-100)
+    if (roundedNumber < 34) {
+        computerChoice = "Rock";
+    } else if (roundedNumber > 66) {
+        computerChoice = "Paper";
+    } else {
+        computerChoice = "Scissor";
+    }
+
+    console.log(computerChoice);
+
     // in the end, we get this choice, and this will be the computer choice
 }
 
