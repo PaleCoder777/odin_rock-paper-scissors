@@ -2,7 +2,6 @@
 // Goal: Create a rock, paper, scissors game in the console, in which 5 rounds can be done and the score is shown.
 
 // Step 1: Write the logic to get the computer choice
-
 // Declare function that gives one of three values (rock, paper, scissors) as the computer choice
 
 function getComputerChoice() {
@@ -30,5 +29,18 @@ function getComputerChoice() {
     // in the end, we get this choice, and this will be the computer choice
     return computerChoice;
 }
+
+// Step 2: Write the logic to get the human choice
+// Your game will be played by a human player.
+// You will write a function that takes the user choice and returns it.
+
+// Declare new function, getHumanChoice()
+function getHumanChoice() {
+    // make new variable that will hold the player choice
+    // since it is player choice, ask player what they will pick (rock || paper || scissor)
+    // put player choice in the variable
+    // we get back value inside the variable
+}
+
 
 console.log( getComputerChoice() );
