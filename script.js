@@ -21,14 +21,14 @@ function getComputerChoice() {
     if (roundedNumber < 34) {
         computerChoice = "Rock";
     } else if (roundedNumber > 66) {
-        computerChoice = "Paper";
-    } else {
         computerChoice = "Scissor";
+    } else {
+        computerChoice = "Paper";
     }
-
     console.log(computerChoice);
 
     // in the end, we get this choice, and this will be the computer choice
+    return computerChoice;
 }
 
-getComputerChoice();
+console.log( getComputerChoice() );
