@@ -48,5 +48,15 @@ function getHumanChoice() {
 }
 
 
+// Step 3: Declare the players score variables
+// Your game will keep track of the players score.
+// You will write variables to keep track of the players score.
+
+// Make variable for human score
+// Make variable for computer score
+// Scores start at 0
+
+
+
 console.log( getComputerChoice() );
 console.log( getHumanChoice() );
