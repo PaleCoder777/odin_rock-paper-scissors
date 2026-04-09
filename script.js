@@ -118,3 +118,7 @@ function playRound(computerChoice, humanChoice) {
 console.log(`This is the computer selection - ${computerSelection} `);
 console.log(`This is the human selection - ${humanSelection} `);
 playRound(computerSelection, humanSelection);
+
+// Logic Errors / Potential Improvements
+// (-) If the prompt returns null, the game continues saying that null ties with computerChoice
+// (+) Place the case insensitive line to the getHumanChoice() istead of the playRound()
