@@ -82,19 +82,27 @@ function playRound(computerChoice, humanChoice) {
 
     // Make human choice variable case insensitive; type correct word, will work
     humanChoice = humanChoice.toLowerCase();
-    console.log(humanChoice);
+    //console.log(humanChoice);
 
     // With the two choices, consider the rules of the game, who will win/lose? Can there be a tie?
     if ((humanChoice === "rock" && computerChoice === "paper")
     || (humanChoice === "paper" && computerChoice === "scissors")
     || (humanChoice === "scissors" && computerChoice === "rock") ){ //all cases where computer wins
         computerScore = ++computerScore;
-        let result = ("You lose, paper beats rock! Computer gets point!");
+        let result = (`You lose, ${computerChoice} beats ${humanChoice}! Computer gets point!`);
+        let scoreboard = (`Computer Score: ${computerScore} \t Human Score: ${humanScore}`);
         console.log(result);
-        console.log(`Computer Score: ${computerScore} \s Human Score: ${humanScore}`);
+        console.log(scoreboard);
         return result;
-    } else if (humanChoice === "rock" && computerChoice === "scissors") { //all cases where human wins
-
+    } else if ((humanChoice === "rock" && computerChoice === "scissors")
+    || (humanChoice === "paper" && computerChoice === "rock")
+    || (humanChoice === "scissors" && computerChoice === "paper") ){ //all cases where human wins
+        humanScore = ++humanScore;
+        let result = (`You win, ${humanChoice} beats ${computerChoice}! Human gets point!`);
+        let scoreboard = (`Computer Score: ${computerScore} \t Human Score: ${humanScore}`);
+        console.log(result);
+        console.log(scoreboard);
+        return result;
     }
     // Return a statement of who won that round
     // Whoever is the winner earns a point! 
