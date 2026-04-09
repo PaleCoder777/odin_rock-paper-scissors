@@ -19,11 +19,11 @@ function getComputerChoice() {
 
     // depending on rounded, random number, we put rock || paper || scissor in the computer choice (0-33, 67-100)
     if (roundedNumber < 34) {
-        computerChoice = "Rock";
+        computerChoice = "rock";
     } else if (roundedNumber > 66) {
-        computerChoice = "Scissor";
+        computerChoice = "scissors";
     } else {
-        computerChoice = "Paper";
+        computerChoice = "paper";
     }
     //console.log(computerChoice);
 
@@ -41,7 +41,7 @@ function getHumanChoice() {
     let humanChoice;
 
     // since it is player choice, ask player what they will pick (rock || paper || scissor), put in variable
-    humanChoice = prompt(`Pick one of the following: "Rock", "Paper", Scissor"`, "");
+    humanChoice = prompt(`Pick one of the following: "Rock", "Paper", Scissors"`, "");
     //console.log(humanChoice);
 
     // we get back value inside the variable
@@ -85,6 +85,17 @@ function playRound(computerChoice, humanChoice) {
     console.log(humanChoice);
 
     // With the two choices, consider the rules of the game, who will win/lose? Can there be a tie?
+    if ((humanChoice === "rock" && computerChoice === "paper")
+    || (humanChoice === "paper" && computerChoice === "scissors")
+    || (humanChoice === "scissors" && computerChoice === "rock") ){ //all cases where computer wins
+        computerScore = ++computerScore;
+        let result = ("You lose, paper beats rock! Computer gets point!");
+        console.log(result);
+        console.log(`Computer Score: ${computerScore} \s Human Score: ${humanScore}`);
+        return result;
+    } else if (humanChoice === "rock" && computerChoice === "scissors") { //all cases where human wins
+
+    }
     // Return a statement of who won that round
     // Whoever is the winner earns a point! 
 }
