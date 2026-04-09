@@ -8,11 +8,11 @@
 function getComputerChoice() {
     // make a variable that holds a randomn integer value from 0-100
     let randomNumber = Math.random() * 100;
-    console.log(randomNumber);
+    //console.log(randomNumber);
     
     // we should round the random number we get
     let roundedNumber = Math.round(randomNumber);
-    console.log(roundedNumber);
+    //console.log(roundedNumber);
 
     // make another variable to hold computer choice
     let computerChoice;
@@ -25,7 +25,7 @@ function getComputerChoice() {
     } else {
         computerChoice = "Paper";
     }
-    console.log(computerChoice);
+    //console.log(computerChoice);
 
     // in the end, we get this choice, and this will be the computer choice
     return computerChoice;
@@ -42,7 +42,7 @@ function getHumanChoice() {
 
     // since it is player choice, ask player what they will pick (rock || paper || scissor), put in variable
     humanChoice = prompt(`Pick one of the following: "Rock", "Paper", Scissor"`, "");
-    console.log(humanChoice);
+    //console.log(humanChoice);
 
     // we get back value inside the variable
     return humanChoice;
@@ -64,21 +64,30 @@ humanScore = 0;
 computerScore = 0;
 
 
+
 // Step 4: Write the logic to play a single round
 // Your game will be played round by round. You will write a function that takes
 // the human and computer player choices as arguments, plays a single round,
 // increments the round winner’s score and logs a winner announcement.
 
-// Make new function that plays a round of 'Rock, Paper, Scissors', it needs two parameters
-
 // Make variable that holds computerChoice (could use the function as the parameter)?
+let humanSelection = getHumanChoice();
+
 // Make variable that holds humanChoice (could use function as parameter)?
-    // Make human choice variable case insensitive; as long as they type out one of the option, it will work
-    // With the two choices, we need to consider the rules of the game, who will win/lose? Can there be a tie?
+let computerSelection = getComputerChoice();
+
+
+// Make new function that plays a round of 'Rock, Paper, Scissors', it needs two parameters
+function playRound(humanChoice, computerChoice) {
+
+    // Make human choice variable case insensitive; type correct word, will work
+    humanChoice = humanChoice.toLowerCase();
+
+    // With the two choices, consider the rules of the game, who will win/lose? Can there be a tie?
     // Return a statement of who won that round
-    // Whoever is the winner earns a point!
+    // Whoever is the winner earns a point! 
+}
 
 
-
-console.log(`This is the call for computer choice - ${getComputerChoice()} `);
-console.log(`This is the call for human choice - ${getHumanChoice()} `);
+console.log(`This is the computer selection - ${computerSelection} `);
+console.log(`This is the human selection - ${humanSelection} `);
