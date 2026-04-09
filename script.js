@@ -78,10 +78,11 @@ let computerSelection = getComputerChoice();
 
 
 // Make new function that plays a round of 'Rock, Paper, Scissors', it needs two parameters
-function playRound(humanChoice, computerChoice) {
+function playRound(computerChoice, humanChoice) {
 
     // Make human choice variable case insensitive; type correct word, will work
     humanChoice = humanChoice.toLowerCase();
+    console.log(humanChoice);
 
     // With the two choices, consider the rules of the game, who will win/lose? Can there be a tie?
     // Return a statement of who won that round
@@ -91,3 +92,4 @@ function playRound(humanChoice, computerChoice) {
 
 console.log(`This is the computer selection - ${computerSelection} `);
 console.log(`This is the human selection - ${humanSelection} `);
+playRound(computerSelection, humanSelection);
