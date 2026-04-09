@@ -103,6 +103,12 @@ function playRound(computerChoice, humanChoice) {
         console.log(result);
         console.log(scoreboard);
         return result;
+    } else { //when there is no win or loss, we tied!
+        let result = (`${humanChoice} ties with ${computerChoice}! No one gets point!`);
+        let scoreboard = (`Computer Score: ${computerScore} \t Human Score: ${humanScore}`);
+        console.log(result);
+        console.log(scoreboard);
+        return result;
     }
     // Return a statement of who won that round
     // Whoever is the winner earns a point! 
