@@ -64,6 +64,21 @@ humanScore = 0;
 computerScore = 0;
 
 
+// Step 4: Write the logic to play a single round
+// Your game will be played round by round. You will write a function that takes
+// the human and computer player choices as arguments, plays a single round,
+// increments the round winner’s score and logs a winner announcement.
 
-console.log( getComputerChoice() );
-console.log( getHumanChoice() );
+// Make new function that plays a round of 'Rock, Paper, Scissors', it needs two parameters
+
+// Make variable that holds computerChoice (could use the function as the parameter)?
+// Make variable that holds humanChoice (could use function as parameter)?
+    // Make human choice variable case insensitive; as long as they type out one of the option, it will work
+    // With the two choices, we need to consider the rules of the game, who will win/lose? Can there be a tie?
+    // Return a statement of who won that round
+    // Whoever is the winner earns a point!
+
+
+
+console.log(`This is the call for computer choice - ${getComputerChoice()} `);
+console.log(`This is the call for human choice - ${getHumanChoice()} `);
