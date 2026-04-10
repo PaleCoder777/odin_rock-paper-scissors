@@ -129,18 +129,23 @@ function playGame() {
     computerScore = 0;
 
     // needs to play 5 rounds, need to make new choice every round
+    console.log(`Computer Choice: ${computerSelection} \t Human Choice: ${humanSelection}`);
     playRound(computerSelection, humanSelection);
     computerSelection = getComputerChoice();
     humanSelection = getHumanChoice();
+    console.log(`Computer Choice: ${computerSelection} \t Human Choice: ${humanSelection}`);
     playRound(computerSelection, humanSelection);
     computerSelection = getComputerChoice();
     humanSelection = getHumanChoice();
+    console.log(`Computer Choice: ${computerSelection} \t Human Choice: ${humanSelection}`);
     playRound(computerSelection, humanSelection);
     computerSelection = getComputerChoice();
     humanSelection = getHumanChoice();
+    console.log(`Computer Choice: ${computerSelection} \t Human Choice: ${humanSelection}`);
     playRound(computerSelection, humanSelection);
     computerSelection = getComputerChoice();
     humanSelection = getHumanChoice();
+    console.log(`Computer Choice: ${computerSelection} \t Human Choice: ${humanSelection}`);
     playRound(computerSelection, humanSelection);
     
     // We need to put the score in here as well, keep track of it (score above)
@@ -158,8 +163,6 @@ function playGame() {
 }
 
 
-console.log(`This is the computer selection - ${computerSelection} `);
-console.log(`This is the human selection - ${humanSelection} `);
 playGame();
 
 // Logic Errors / Potential Improvements
