@@ -1,9 +1,11 @@
 # odin_rock-paper-scissors
-In The Odin Project foundations course, this is a project within the JavaScript Basics section.
+Source:
+- The Odin Project, Foundations Course, JavaScript Basics, Project: Rock, Paper, Scissors
 
 Project Scope:
-This is JavaScript focused project aimed at writing the logic to play the game,
-"Rock, Paper, Scissors".
+- JavaScript Focus
+- Creating "Rock, Paper, Scissors" game in the browser console
+
 
 Concepts Used:
 - declaring functions, invoking functions, function parameters/arguments, return statement
