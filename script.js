@@ -167,4 +167,6 @@ playGame();
 
 // Logic Errors / Potential Improvements
 // (-) If the prompt returns null, the game continues saying that null ties with computerChoice
+// (-) If prompt returns non-choices, the game logic considers it a tie
 // (+) Place the case insensitive line to the getHumanChoice() istead of the playRound()
+// (?) I wonder if we can just put every function inside playGame()
