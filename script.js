@@ -143,8 +143,18 @@ function playGame() {
     humanSelection = getHumanChoice();
     playRound(computerSelection, humanSelection);
     
-    // We need to put the score in here as well, keep track of it
+    // We need to put the score in here as well, keep track of it (score above)
     // declare a winner after the 5 rounds, so compare score, who is higher
+    if (humanScore > computerScore) {
+        let declaration = (`Congratulations human, you have won!`);
+        console.log(declaration);
+    } else if (humanScore < computerScore) {
+        let declaration = (`Uh oh, you have lost to the computer!`);
+        console.log(declaration);
+    } else {
+        let declaration = (`No winner, no loser, try again!`);
+        console.log(declaration);
+    }
 }
 
 
