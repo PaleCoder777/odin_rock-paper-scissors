@@ -114,6 +114,15 @@ function playRound(computerChoice, humanChoice) {
     // Whoever is the winner earns a point! 
 }
 
+// Step 5: Write the logic to play the entire game
+// Your game will play 5 rounds. You will write a function named playGame that calls
+// playRound to play 5 rounds, keeps track of the scores and declares a winner at the end.
+
+// Make new function, playGame()
+    // needs to play 5 rounds
+    // We need to put the score in here as well, keep track of it
+    // declare a winner after the 5 rounds, so compare score, who is higher
+
 
 console.log(`This is the computer selection - ${computerSelection} `);
 console.log(`This is the human selection - ${humanSelection} `);
