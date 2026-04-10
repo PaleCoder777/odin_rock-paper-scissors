@@ -128,11 +128,19 @@ function playGame() {
     humanScore = 0;
     computerScore = 0;
 
-    // needs to play 5 rounds
+    // needs to play 5 rounds, need to make new choice every round
     playRound(computerSelection, humanSelection);
+    computerSelection = getComputerChoice();
+    humanSelection = getHumanChoice();
     playRound(computerSelection, humanSelection);
+    computerSelection = getComputerChoice();
+    humanSelection = getHumanChoice();
     playRound(computerSelection, humanSelection);
+    computerSelection = getComputerChoice();
+    humanSelection = getHumanChoice();
     playRound(computerSelection, humanSelection);
+    computerSelection = getComputerChoice();
+    humanSelection = getHumanChoice();
     playRound(computerSelection, humanSelection);
     
     // We need to put the score in here as well, keep track of it
