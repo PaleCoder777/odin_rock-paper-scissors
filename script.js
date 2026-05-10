@@ -170,3 +170,4 @@ playGame();
 // (-) If prompt returns non-choices, the game logic considers it a tie
 // (+) Place the case insensitive line to the getHumanChoice() istead of the playRound()
 // (?) I wonder if we can just put every function inside playGame()
+// (+) For computer choice, switch from ifelse to an array w/ random index
