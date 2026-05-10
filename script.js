@@ -50,10 +50,10 @@ function getHumanChoice() {
 // increments the round winner’s score and logs a winner announcement.
 
 // Make variable that holds computerChoice (could use the function as the parameter)?
-// let computerSelection = getComputerChoice();
+let computerSelection;
 
 // Make variable that holds humanChoice (could use function as parameter)?
-// let humanSelection = getHumanChoice();
+let humanSelection;
 
 
 // Make new function that plays a round of 'Rock, Paper, Scissors', it needs two parameters
@@ -98,7 +98,34 @@ function getHumanChoice() {
 // Step 5: Write the logic to play the entire game
 // Your game will play 5 rounds. You will write a function named playGame that calls
 
+// DOM Manipulation Section
 
+// Add eventListeners to each button -> play a round, will use event delegation
+let gameButtons = document.querySelector("#gameButtons");
+console.log(gameButtons);
+gameButtons.addEventListener("click", (event) => {
+    let target = event.target;
+
+    switch(target.id) {
+        case "rock":
+            computerSelection = getComputerChoice();
+            humanSelection = target.id;
+            playRound(computerSelection, humanSelection);
+            break;
+
+        case "paper":
+            computerSelection = getComputerChoice();
+            humanSelection = target.id;
+            playRound(computerSelection, humanSelection);
+            break;
+
+        case "scissors":
+            computerSelection = getComputerChoice();
+            humanSelection = target.id;
+            playRound(computerSelection, humanSelection);
+            break;
+    }
+});
 
 
 
