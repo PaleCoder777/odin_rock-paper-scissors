@@ -27,3 +27,22 @@ Logic Errors Encountered:
 Project Considerations:
 - The case insensitivity could be placed inside getHumanChoice() instead of playRound()
 - Place all functions inside playGame()
+
+05/10/2026 - Adding GUI feature
+Project Scope:
+- HTML, CSS, JavaScript
+- Buidling off Rock, Paper, Scissor console game to now build a
+graphical user interface, allowing for a more user friendly experience.
+
+Concepts Used:
+- arrays
+- event delegations
+- event listeners
+
+
+Logic Errors Encountered:
+- (start here)
+
+Project Considerations:
+- refactoring functions using newly learned fundamentals
+
