@@ -70,17 +70,6 @@ let humanSelection = getHumanChoice();
 
 
 // Make new function that plays a round of 'Rock, Paper, Scissors', it needs two parameters
-// !!! MOVED INSIDE playGame() !!!
-
-// Add score variables here inside this
-
-// Step 5: Write the logic to play the entire game
-// Your game will play 5 rounds. You will write a function named playGame that calls
-// playRound to play 5 rounds, keeps track of the scores and declares a winner at the end.
-
-// Make new function, playGame()
-function playGame() {
-    // Add playRound() to  this function
     function playRound(computerChoice, humanChoice) {
 
     // Make human choice variable case insensitive; type correct word, will work
@@ -117,6 +106,12 @@ function playGame() {
     // Whoever is the winner earns a point! 
 }
 
+// Add score variables here inside this
+
+// Step 5: Write the logic to play the entire game
+// Your game will play 5 rounds. You will write a function named playGame that calls
+// playRound to play 5 rounds, keeps track of the scores and declares a winner at the end.
+
     // Add score variables here:
     // Make variable for human score
     let humanScore;
@@ -128,42 +123,8 @@ function playGame() {
     humanScore = 0;
     computerScore = 0;
 
-    // needs to play 5 rounds, need to make new choice every round
-    console.log(`Computer Choice: ${computerSelection} \t Human Choice: ${humanSelection}`);
-    playRound(computerSelection, humanSelection);
-    computerSelection = getComputerChoice();
-    humanSelection = getHumanChoice();
-    console.log(`Computer Choice: ${computerSelection} \t Human Choice: ${humanSelection}`);
-    playRound(computerSelection, humanSelection);
-    computerSelection = getComputerChoice();
-    humanSelection = getHumanChoice();
-    console.log(`Computer Choice: ${computerSelection} \t Human Choice: ${humanSelection}`);
-    playRound(computerSelection, humanSelection);
-    computerSelection = getComputerChoice();
-    humanSelection = getHumanChoice();
-    console.log(`Computer Choice: ${computerSelection} \t Human Choice: ${humanSelection}`);
-    playRound(computerSelection, humanSelection);
-    computerSelection = getComputerChoice();
-    humanSelection = getHumanChoice();
-    console.log(`Computer Choice: ${computerSelection} \t Human Choice: ${humanSelection}`);
-    playRound(computerSelection, humanSelection);
-    
-    // We need to put the score in here as well, keep track of it (score above)
-    // declare a winner after the 5 rounds, so compare score, who is higher
-    if (humanScore > computerScore) {
-        let declaration = (`Congratulations human, you have won!`);
-        console.log(declaration);
-    } else if (humanScore < computerScore) {
-        let declaration = (`Uh oh, you have lost to the computer!`);
-        console.log(declaration);
-    } else {
-        let declaration = (`No winner, no loser, try again!`);
-        console.log(declaration);
-    }
-}
 
 
-playGame();
 
 // Logic Errors / Potential Improvements
 // (-) If the prompt returns null, the game continues saying that null ties with computerChoice
