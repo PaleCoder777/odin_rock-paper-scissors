@@ -67,27 +67,26 @@ let humanSelection;
         (humanChoice === "paper" && computerChoice === "scissors") ||
         (humanChoice === "scissors" && computerChoice === "rock") ){
             ++computerScore;
-            result = (`You lose, ${computerChoice} beats ${humanChoice}! Computer gets point!`);
-            scoreboard = (`Computer Score: ${computerScore} \t Human Score: ${humanScore}`);
-            console.log(result);
-            console.log(scoreboard);
+            // When Computer wins, current round shows it
+            currentRound.textContent = (
+                `Current Round: Computer wins! ${computerChoice} beats ${humanChoice}`
+            );
     
         } else if // Human Win Scenarios
         ((humanChoice === "rock" && computerChoice === "scissors") ||
         (humanChoice === "paper" && computerChoice === "rock") ||
         (humanChoice === "scissors" && computerChoice === "paper") ){
             ++humanScore;
-            result = (`You win, ${humanChoice} beats ${computerChoice}! Human gets point!`);
-            scoreboard = (`Computer Score: ${computerScore} \t Human Score: ${humanScore}`);
-            console.log(result);
-            console.log(scoreboard);
+            // When human wins, current round shows it
+            currentRound.textContent = (
+                `Current Round: You win! ${humanChoice} beats ${computerChoice}`
+            );
 
         } else // Tie Scenarios or Logic Errors DX
             {
-            result = (`${humanChoice} ties with ${computerChoice}! No one gets point!`);
-            scoreboard = (`Computer Score: ${computerScore} \t Human Score: ${humanScore}`);
-            console.log(result);
-            console.log(scoreboard);
+            currentRound.textContent = (
+                `Current Round: It's a tie! Try again!`
+            );
             }
 }
 
