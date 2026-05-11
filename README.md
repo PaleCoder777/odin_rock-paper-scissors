@@ -36,13 +36,21 @@ graphical user interface, allowing for a more user friendly experience.
 
 Concepts Used:
 - arrays
+- DOM manipulation
+- DOM-referencing variables
 - event delegations
 - event listeners
+- element id/class naming
+- git commits
+- git branching
+- git merging
 
 
 Logic Errors Encountered:
 - (start here)
 
 Project Considerations:
+- previous logic errors irrelevent with DOM manipulation
 - refactoring functions using newly learned fundamentals
+- DOM-referencing variables place at top of document to avoid calls before declarations
 
