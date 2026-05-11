@@ -34,4 +34,18 @@
 humanChoice = humanChoice.toLowerCase();
 */
 
+// Step 2: Write the logic to get the human choice
+/* function getHumanChoice() {
+    // make new variable that will hold the player choice
+    let humanChoice;
+
+    // since it is player choice, ask player what they will pick (rock || paper || scissor), put in variable
+    humanChoice = prompt(`Pick one of the following: "Rock", "Paper", Scissors"`, "");
+    //console.log(humanChoice);
+
+    // we get back value inside the variable
+    return humanChoice;
+}
+*/
+
 // HEAD
