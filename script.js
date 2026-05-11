@@ -29,7 +29,7 @@ let humanSelection;
         (humanChoice === "scissors" && computerChoice === "rock") ){
 
             // When Computer wins, current round shows it, score updates
-            currentRound.textContent = (`Current Round: Computer wins! ${computerChoice} beats ${humanChoice}`);
+            currentRound.textContent = (`Current Round: Computer struck! ${computerChoice} beats ${humanChoice}`);
             computerScoreText.textContent = (`${++computerScore}`);
 
             // When computer reaches 5 points
@@ -37,7 +37,7 @@ let humanSelection;
                 rockBtn.disabled = true;
                 paperBtn.disabled = true;
                 scissorsBtn.disabled = true;
-                gameOver.textContent = (`Too bad, looks like the computer got you this time, try again!`);
+                gameOver.textContent = (`Too bad, looks like AI  took over your job industry, will you rise up again?`);
                 gameScores.appendChild(playAgain);
             }
     
@@ -47,7 +47,7 @@ let humanSelection;
         (humanChoice === "scissors" && computerChoice === "paper") ){
 
             // When human wins, current round shows it, score updates
-            currentRound.textContent = (`Current Round: You win! ${humanChoice} beats ${computerChoice}`);
+            currentRound.textContent = (`Current Round: You struck! ${humanChoice} beats ${computerChoice}`);
             humanScoreText.textContent = (`${++humanScore}`);
 
             // When human reaches 5 points
@@ -55,13 +55,13 @@ let humanSelection;
                 rockBtn.disabled = true;
                 paperBtn.disabled = true;
                 scissorsBtn.disabled = true;
-                gameOver.textContent = (`Congratulations, you have secured victory! Go for another win!`);
+                gameOver.textContent = (`Congratulations, you have staved off the invading AI bots, join your comrades and continue the fight!`);
                 gameScores.appendChild(playAgain);
             }
 
         } else // Tie Scenarios or Logic Errors DX
             {
-            currentRound.textContent = (`Current Round: It's a tie! Try again!`);
+            currentRound.textContent = (`Current Round: Your weapons clashed together, strike once more!`);
             }
 }
 
@@ -126,12 +126,12 @@ console.log(playAgain);
 
 // playAgain button to reset score, buttons, and announcement
 playAgain.addEventListener("click", () => {
-    currentRound.textContent = (`This area will show who won the round,displaying both your and the computer choice`);
+    currentRound.textContent = (`This will display who has struck the other!`);
     computerScore = 0;
     computerScoreText.textContent = (`${computerScore}`);
     humanScore = 0;
     humanScoreText.textContent = (`${humanScore}`);
-    gameOver.textContent = (`Who will reach 5 points first?`)
+    gameOver.textContent = (`Who will strike 5 times first in this battle?`)
     rockBtn.disabled = false;
     paperBtn.disabled = false;
     scissorsBtn.disabled = false;
