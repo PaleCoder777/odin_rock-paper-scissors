@@ -32,16 +32,15 @@ function getHumanChoice() {
 // Step 3: Declare the players score variables
 // Your game will keep track of the players score.
 // You will write variables to keep track of the players score.
-    // Add score variables here:
-    // Make variable for human score
-    let humanScore;
+// Add score variables here:
+// Make variable for human score
+// Make variable for computer score
+let computerScore = 0;
 
-    // Make variable for computer score
-    let computerScore;
+let humanScore = 0;
 
-    // Scores start at 0
-    humanScore = 0;
-    computerScore = 0;
+
+
 
 
 // Step 4: Write the logic to play a single round
@@ -58,35 +57,40 @@ let humanSelection;
 
 // Play a Round of RPS, need two parameters
     function playRound(computerChoice, humanChoice) {
-        // Declare variables despite scenario
-        let result;
-        let scoreboard;
-        
+     
         if // Computer Win Scenarios
         ((humanChoice === "rock" && computerChoice === "paper") ||
         (humanChoice === "paper" && computerChoice === "scissors") ||
         (humanChoice === "scissors" && computerChoice === "rock") ){
             ++computerScore;
-            // When Computer wins, current round shows it
-            currentRound.textContent = (
-                `Current Round: Computer wins! ${computerChoice} beats ${humanChoice}`
-            );
+            // When Computer wins, current round shows it, score updates
+            currentRound.textContent = (`Current Round: Computer wins! ${computerChoice} beats ${humanChoice}`);
+            computerScoreText.textContent = (`${computerScore}`);
+
+            // When computer reaches 5 points
+            if (computerScore === 5) {
+                gameOver.textContent = (`Too bad, looks like the computer got you this time, try again!`);
+                gameScores.appendChild(playAgain);
+            }
     
         } else if // Human Win Scenarios
         ((humanChoice === "rock" && computerChoice === "scissors") ||
         (humanChoice === "paper" && computerChoice === "rock") ||
         (humanChoice === "scissors" && computerChoice === "paper") ){
             ++humanScore;
-            // When human wins, current round shows it
-            currentRound.textContent = (
-                `Current Round: You win! ${humanChoice} beats ${computerChoice}`
-            );
+            // When human wins, current round shows it, score updates
+            currentRound.textContent = (`Current Round: You win! ${humanChoice} beats ${computerChoice}`);
+            humanScoreText.textContent = (`${humanScore}`);
+
+            // When human reaches 5 points
+            if (humanScore === 5) {
+                gameOver.textContent = (`Congratulations, you have secured victory!`);
+                gameScores.appendChild(playAgain);
+            }
 
         } else // Tie Scenarios or Logic Errors DX
             {
-            currentRound.textContent = (
-                `Current Round: It's a tie! Try again!`
-            );
+            currentRound.textContent = (`Current Round: It's a tie! Try again!`);
             }
 }
 
@@ -100,6 +104,7 @@ let humanSelection;
 // Add eventListeners to each button -> play a round, will use event delegation
 let gameButtons = document.querySelector("#gameButtons");
 console.log(gameButtons);
+
 gameButtons.addEventListener("click", (event) => {
     let target = event.target;
 
@@ -128,7 +133,25 @@ gameButtons.addEventListener("click", (event) => {
 let currentRound = document.querySelector("#currentRound")
 console.log(currentRound);
 
+// Span element for holding scores, only update number
+let computerScoreText = document.querySelector("#computerScore");
+computerScoreText.textContent = (`${computerScore}`);
+console.log(computerScoreText);
 
+let humanScoreText = document.querySelector("#humanScore");
+humanScoreText.textContent = (`${humanScore}`);
+console.log(humanScoreText);
+
+// Winner Announcement reference
+let gameOver = document.querySelector("#gameOver");
+console.log(gameOver);
+
+// Play Again Button added by JS
+let gameScores = document.querySelector("#gameScores");
+console.log(gameScores);
+let playAgain = document.createElement("button");
+playAgain.textContent = (`Play Again?`);
+console.log(playAgain);
 
 
 // Logic Errors / Potential Improvements
