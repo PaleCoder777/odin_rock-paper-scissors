@@ -56,41 +56,39 @@ let computerSelection;
 let humanSelection;
 
 
-// Make new function that plays a round of 'Rock, Paper, Scissors', it needs two parameters
+// Play a Round of RPS, need two parameters
     function playRound(computerChoice, humanChoice) {
+        // Declare variables despite scenario
+        let result;
+        let scoreboard;
+        
+        if // Computer Win Scenarios
+        ((humanChoice === "rock" && computerChoice === "paper") ||
+        (humanChoice === "paper" && computerChoice === "scissors") ||
+        (humanChoice === "scissors" && computerChoice === "rock") ){
+            ++computerScore;
+            result = (`You lose, ${computerChoice} beats ${humanChoice}! Computer gets point!`);
+            scoreboard = (`Computer Score: ${computerScore} \t Human Score: ${humanScore}`);
+            console.log(result);
+            console.log(scoreboard);
+    
+        } else if // Human Win Scenarios
+        ((humanChoice === "rock" && computerChoice === "scissors") ||
+        (humanChoice === "paper" && computerChoice === "rock") ||
+        (humanChoice === "scissors" && computerChoice === "paper") ){
+            ++humanScore;
+            result = (`You win, ${humanChoice} beats ${computerChoice}! Human gets point!`);
+            scoreboard = (`Computer Score: ${computerScore} \t Human Score: ${humanScore}`);
+            console.log(result);
+            console.log(scoreboard);
 
-        // Make human choice variable case insensitive; type correct word, will work
-        humanChoice = humanChoice.toLowerCase();
-        //console.log(humanChoice);
-
-        // With the two choices, consider the rules of the game, who will win/lose? Can there be a tie?
-        if ((humanChoice === "rock" && computerChoice === "paper")
-        || (humanChoice === "paper" && computerChoice === "scissors")
-        || (humanChoice === "scissors" && computerChoice === "rock") ){ //all cases where computer wins
-            computerScore = ++computerScore;
-            let result = (`You lose, ${computerChoice} beats ${humanChoice}! Computer gets point!`);
-            let scoreboard = (`Computer Score: ${computerScore} \t Human Score: ${humanScore}`);
+        } else // Tie Scenarios or Logic Errors DX
+            {
+            result = (`${humanChoice} ties with ${computerChoice}! No one gets point!`);
+            scoreboard = (`Computer Score: ${computerScore} \t Human Score: ${humanScore}`);
             console.log(result);
             console.log(scoreboard);
-            return result;
-        } else if ((humanChoice === "rock" && computerChoice === "scissors")
-        || (humanChoice === "paper" && computerChoice === "rock")
-        || (humanChoice === "scissors" && computerChoice === "paper") ){ //all cases where human wins
-            humanScore = ++humanScore;
-            let result = (`You win, ${humanChoice} beats ${computerChoice}! Human gets point!`);
-            let scoreboard = (`Computer Score: ${computerScore} \t Human Score: ${humanScore}`);
-            console.log(result);
-            console.log(scoreboard);
-            return result;
-        } else { //when there is no win or loss, we tied!
-            let result = (`${humanChoice} ties with ${computerChoice}! No one gets point!`);
-            let scoreboard = (`Computer Score: ${computerScore} \t Human Score: ${humanScore}`);
-            console.log(result);
-            console.log(scoreboard);
-            return result;
-        }
-        // Return a statement of who won that round
-        // Whoever is the winner earns a point! 
+            }
 }
 
 // Add score variables here inside this
@@ -126,6 +124,11 @@ gameButtons.addEventListener("click", (event) => {
             break;
     }
 });
+
+// Display current round results
+let currentRound = document.querySelector("#currentRound")
+console.log(currentRound);
+
 
 
 
