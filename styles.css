@@ -4,6 +4,7 @@ body {
     text-align: center;
 }
 
-#gamestart {
-    text-align: center;
+* {
+    margin: 16px;
+    font-size: 30px;
 }
