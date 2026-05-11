@@ -3,7 +3,6 @@
 // in which 5 rounds can be done and the score is shown.
 
 // Step 1: Write logic to get the computer choice
-// Changed from ifel statement to using array index, verified w/ console.log
 function getComputerChoice() {
     let gameChoices = ["rock", "paper", "scissors"]
     let indexNumber = Math.floor(Math.random() * gameChoices.length);
@@ -11,49 +10,15 @@ function getComputerChoice() {
     return computerChoice;
 }
 
-// Step 2: Write the logic to get the human choice
-// Your game will be played by a human player.
-// You will write a function that takes the user choice and returns it.
-
-// Declare new function, getHumanChoice()
-function getHumanChoice() {
-    // make new variable that will hold the player choice
-    let humanChoice;
-
-    // since it is player choice, ask player what they will pick (rock || paper || scissor), put in variable
-    humanChoice = prompt(`Pick one of the following: "Rock", "Paper", Scissors"`, "");
-    //console.log(humanChoice);
-
-    // we get back value inside the variable
-    return humanChoice;
-}
-
-
-// Step 3: Declare the players score variables
-// Your game will keep track of the players score.
-// You will write variables to keep track of the players score.
-// Add score variables here:
-// Make variable for human score
-// Make variable for computer score
+// Step 3: Track computer and human score
 let computerScore = 0;
-
 let humanScore = 0;
 
+// Step 4: Write the logic to play a single roun
 
-
-
-
-// Step 4: Write the logic to play a single round
-// Your game will be played round by round. You will write a function that takes
-// the human and computer player choices as arguments, plays a single round,
-// increments the round winner’s score and logs a winner announcement.
-
-// Make variable that holds computerChoice (could use the function as the parameter)?
+// Variables to hold computer and human choice
 let computerSelection;
-
-// Make variable that holds humanChoice (could use function as parameter)?
 let humanSelection;
-
 
 // Play a Round of RPS, need two parameters
     function playRound(computerChoice, humanChoice) {
@@ -100,11 +65,6 @@ let humanSelection;
             }
 }
 
-// Add score variables here inside this
-
-// Step 5: Write the logic to play the entire game
-// Your game will play 5 rounds. You will write a function named playGame that calls
-
 // DOM Manipulation Section
 
 // Add eventListeners to each button -> play a round, will use event delegation
@@ -134,8 +94,6 @@ gameButtons.addEventListener("click", (event) => {
             break;
     }
 });
-
-
 
 // Variables to reference each choice button
 let rockBtn = document.querySelector("#rock");
