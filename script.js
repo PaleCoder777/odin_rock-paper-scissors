@@ -62,13 +62,16 @@ let humanSelection;
         ((humanChoice === "rock" && computerChoice === "paper") ||
         (humanChoice === "paper" && computerChoice === "scissors") ||
         (humanChoice === "scissors" && computerChoice === "rock") ){
-            ++computerScore;
+
             // When Computer wins, current round shows it, score updates
             currentRound.textContent = (`Current Round: Computer wins! ${computerChoice} beats ${humanChoice}`);
-            computerScoreText.textContent = (`${computerScore}`);
+            computerScoreText.textContent = (`${++computerScore}`);
 
             // When computer reaches 5 points
             if (computerScore === 5) {
+                rockBtn.disabled = true;
+                paperBtn.disabled = true;
+                scissorsBtn.disabled = true;
                 gameOver.textContent = (`Too bad, looks like the computer got you this time, try again!`);
                 gameScores.appendChild(playAgain);
             }
@@ -77,14 +80,17 @@ let humanSelection;
         ((humanChoice === "rock" && computerChoice === "scissors") ||
         (humanChoice === "paper" && computerChoice === "rock") ||
         (humanChoice === "scissors" && computerChoice === "paper") ){
-            ++humanScore;
+
             // When human wins, current round shows it, score updates
             currentRound.textContent = (`Current Round: You win! ${humanChoice} beats ${computerChoice}`);
-            humanScoreText.textContent = (`${humanScore}`);
+            humanScoreText.textContent = (`${++humanScore}`);
 
             // When human reaches 5 points
             if (humanScore === 5) {
-                gameOver.textContent = (`Congratulations, you have secured victory!`);
+                rockBtn.disabled = true;
+                paperBtn.disabled = true;
+                scissorsBtn.disabled = true;
+                gameOver.textContent = (`Congratulations, you have secured victory! Go for another win!`);
                 gameScores.appendChild(playAgain);
             }
 
@@ -129,6 +135,13 @@ gameButtons.addEventListener("click", (event) => {
     }
 });
 
+
+
+// Variables to reference each choice button
+let rockBtn = document.querySelector("#rock");
+let paperBtn = document.querySelector("#paper");
+let scissorsBtn = document.querySelector("#scissors");
+
 // Display current round results
 let currentRound = document.querySelector("#currentRound")
 console.log(currentRound);
@@ -153,6 +166,20 @@ let playAgain = document.createElement("button");
 playAgain.textContent = (`Play Again?`);
 console.log(playAgain);
 
+// playAgain button to reset score, buttons, and announcement
+playAgain.addEventListener("click", () => {
+    currentRound.textContent = (`This area will show who won the round,displaying both your and the computer choice`);
+    computerScore = 0;
+    computerScoreText.textContent = (`${computerScore}`);
+    humanScore = 0;
+    humanScoreText.textContent = (`${humanScore}`);
+    gameOver.textContent = (`Who will reach 5 points first?`)
+    rockBtn.disabled = false;
+    paperBtn.disabled = false;
+    scissorsBtn.disabled = false;
+    gameScores.removeChild(playAgain);
+});
+
 
 // Logic Errors / Potential Improvements
 // (-) If the prompt returns null, the game continues saying that null ties with computerChoice
@@ -161,4 +188,4 @@ console.log(playAgain);
 // (?) I wonder if we can just put every function inside playGame()
 // 05/10/2026 - Graphical User Interace Feature
 // (+) For computer choice, switch from ifelse use to array use
-
+// (+) Put variables that reference the DOM at the top, error occur if called before declared
