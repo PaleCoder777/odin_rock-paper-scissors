@@ -28,29 +28,27 @@ Project Considerations:
 - The case insensitivity could be placed inside getHumanChoice() instead of playRound()
 - Place all functions inside playGame()
 
-05/10/2026 - Adding GUI feature
-Project Scope:
+//NEW// 05/10/2026 - Adding GUI feature
+
+Feature Scope:
 - HTML, CSS, JavaScript
-- Buidling off Rock, Paper, Scissor console game to now build a
-graphical user interface, allowing for a more user friendly experience.
+- Creating a graphical user interface for the Rock, Paper, Scissor game, removing the need for console, which allows for a more user friendly experience.
 
 Concepts Used:
-- arrays
-- DOM manipulation
-- DOM-referencing variables
-- event delegations
-- event listeners
-- element id/class naming
-- git commits
-- git branching
-- git merging
-
+- created a "rps-ui" branch to work on a new feature without affecting the working "main" branch, then merged them after the feature was finished
+- deleted the feature branch locally and on github
+- Holding game choices inside an array and choosing an index pseudorandomly
+- declaring variables that reference DOM nodes
+- setting up eventlisteners so that the button the user selects is their choice and plays a round of RPS
+- manipulating the DOM to display selections, scores, and winner instead of it being in the console
+- using event delegation to have my gameButton section listen for click events instead of every button having a listener
+- creating element IDs as needed when I need to reference them
 
 Logic Errors Encountered:
-- (start here)
+- N/A
 
 Project Considerations:
-- previous logic errors irrelevent with DOM manipulation
+- previous logic errors will not be encountered with GUI approach
 - refactoring functions using newly learned fundamentals
 - DOM-referencing variables place at top of document to avoid calls before declarations
 
